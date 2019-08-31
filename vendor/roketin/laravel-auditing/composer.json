@@ -1,0 +1,30 @@
+{
+    "name": "roketin/laravel-auditing",
+    "description": "personal used for Roketin Engine. Keep a change history for your models using laravel version 5.*",
+    "keywords": ["log", "auditing", "laravel", "register", "observe","roketin"],
+    "homepage": "https://github.com/roketin/laravel-auditing",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivan",
+            "email": "ivan@roketin.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "~5.0|~5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Roketin\\Auditing\\": "src/"
+        }
+    },    
+    "autoload-dev": {
+	"classmap": ["tests"]
+    },
+    "minimum-stability": "dev"
+}
