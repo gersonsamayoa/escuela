@@ -31,8 +31,8 @@
 	</div>
 
 	<div class="form-group">
-	{!!Form::label('carné', 'Carné')!!}
-	{!!Form::text('carnet',null,['class'=>'form-control','placeholder'=> 'Carné'])!!}
+	{!!Form::label('carné', 'Carné o Codigo Personal')!!}
+	{!!Form::text('carnet',null,['class'=>'form-control','placeholder'=> 'Carné o Codigo Personal'])!!}
 	</div>
 
 	<div class="form-group">
@@ -45,12 +45,7 @@
 	{!!Form::select('grado_id', $grados, null, ['class'=>'form-control', 'placeholder'=> 'Seleccione un Grado', 'required'])!!}
 	</div>
 
-	<div class="form-group">
-	{!!Form::label('alumnonuevo','Es alumno Nuevo:')!!}
-	{!!Form::select('alumnonuevo', ['si'=>'Si','no'=>'No'], null, ['class'=>'form-control','placeholder'=>'Selecciona una opción...', 'required'])!!}
-	</div>
-
-	<h3 align="center">Datos del Encargado</h3>
+	<!--<h3 align="center">Datos del Encargado</h3>
 	<div class="form-group">
 	{!!Form::label('encargado', 'Nombre Encargado')!!}
 	{!!Form::text('encargado',null,['class'=>'form-control','placeholder'=> 'Encargado', 'required'])!!}
@@ -109,7 +104,7 @@
 	<div class="form-group">
 	{!!Form::label('telefono3', 'Telefono Celular')!!}
 	{!!Form::text('telefono3',null,['class'=>'form-control','placeholder'=> '####-####', 'required'])!!}
-	</div>
+	</div>-->
 
 	<div class="form-group">
 	{!!Form::submit('Guardar',['class'=>'btn btn-primary'])!!}

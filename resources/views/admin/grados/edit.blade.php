@@ -9,7 +9,7 @@
 </div>
 
 <div class="form-group">
-{!!Form::label('name', 'Nuevo Grado')!!}
+{!!Form::label('name', 'Nombre Grado')!!}
 {!!Form::text('nombre',$grados->nombre,['class'=>'form-control','placeholder'=> 'Nombre', 'required'])!!}
 </div>
 

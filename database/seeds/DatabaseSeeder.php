@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UsuariosTableSeeder::class);
         $this->call(NivelesTableSeeder::class);
+        $this->call(CiclosTableSeeder::class);
 
         Model::reguard();
     }

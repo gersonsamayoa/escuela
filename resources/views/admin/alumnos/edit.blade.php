@@ -34,13 +34,8 @@
 	{!!Form::select('grado_id', $grados, $alumno->grado_id, ['class'=>'form-control', 'placeholder'=> 'Seleccione un Grado', 'required'])!!}
 	</div>
 
-		<div class="form-group">
-		{!!Form::label('alumnonuevo','Es alumno Nuevo:')!!}
-		{!!Form::select('alumnonuevo', ['si'=>'Si','no'=>'No'], $alumno->alumnonuevo, ['class'=>'form-control','placeholder'=>'Selecciona una opción...', 'required'])!!}
-	</div>
 
-
-	<h3 align="center">Datos del Encargado</h3>
+	<!--<h3 align="center">Datos del Encargado</h3>
 
 	<div class="form-group">
 	{!!Form::label('encargado', 'Nombre Encargado')!!}
@@ -100,7 +95,7 @@
 	<div class="form-group">
 	{!!Form::label('telefono3', 'Telefono Celular')!!}
 	{!!Form::text('telefono3',$alumno->telefono3,['class'=>'form-control','placeholder'=> '####-####', 'required'])!!}
-	</div>
+	</div>-->
 
 
 	<div class="form-group">

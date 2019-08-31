@@ -22,8 +22,7 @@
 			<th class="col-sm-2">Apellidos</th>
 			<th class="col-sm-2">Nombres</th>
 			<th>Carné</th>
-			<th class="col-sm-1">Encargado</th>
-			<th>Celular</th>
+			<th class="col-sm-1">Fecha de Nacimiento</th>
 			<th class="col-sm-3">Grado</th>
 			<th class="col-sm-3">Acción</th>
 		</thead>
@@ -35,9 +34,8 @@
 					<td>{{$alumno->apellidos}}</td>
 					<td>{{$alumno->nombres}}</td>
 					<td>{{$alumno->carnet}}</td>
-					<td>{{$alumno->encargado}}</td>
-					<td>{{$alumno->telefono3}}</td>
-					<td width=400>{{$alumno->grado->grado . " " . $alumno->grado->nombre . " Jornada ".$alumno->grado->jornada}}</td>
+					<td>{{$alumno->fechanacimiento}}</td>
+					<td width=400>{{$alumno->grado->grado . " " . $alumno->grado->nombre }}</td>
 					<td>
 						@if(Auth::user()->admin() OR Auth::user()->secretaria())
 						<a href="{{route('admin.alumnos.edit', $alumno->id)}}" class="btn btn-primary btn-sm glyphicon glyphicon-pencil" title="Editar">
@@ -45,9 +43,6 @@
 						@endif
 						@if(Auth::user()->admin() OR Auth::user()->secretaria())
 						<a href="{{route('admin.alumnos.destroy', $alumno->id)}}" onclick="return confirm ('Seguro que deseas elimnarlo?')" class="btn btn-danger btn-sm glyphicon glyphicon-remove" title="Eliminar"></a>
-						@endif
-						@if(Auth::user()->admin() OR Auth::user()->contador())
-						<a href="{{route('admin.colegiaturas.detalles', $alumno->id)}}" class="btn btn-info btn-sm glyphicon glyphicon-usd" title="Colegiaturas"></a>
 						@endif
 						@if(Auth::user()->admin() OR Auth::user()->secretaria() OR Auth::user()->director() OR Auth::user()->contador())
 						<a href="{{route('admin.boleta', $alumno->id)}}" class="btn btn-success btn-sm glyphicon glyphicon-education" title="Boleta de Calificaciones"></a>
