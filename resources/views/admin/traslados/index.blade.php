@@ -34,11 +34,9 @@
 		<thead>
 			<th class="col-sm-1">Seleccionar</th>
 			<th class="col-sm-1">No.</th>
-			<th class="col-sm-2">Apellidos</th>
-			<th class="col-sm-2">Nombres</th>
+			<th class="col-sm-3">Apellidos</th>
+			<th class="col-sm-3">Nombres</th>
 			<th class="col-sm-1">Carné</th>
-			<th class="col-sm-1">Encargado</th>
-			<th class="col-sm-1">Telefono</th>
 			<th class="col-sm-3">Grado</th>
 	
 		</thead>
@@ -54,8 +52,6 @@
 					<td>{{$alumno->apellidos}}</td>
 					<td>{{$alumno->nombres}}</td>
 					<td>{{$alumno->carnet}}</td>
-					<td>{{$alumno->encargado}}</td>
-					<td>{{$alumno->telefono}}</td>
 					<td width=400>{{$alumno->grado->grado . " " . $alumno->grado->nombre}}</td>
 					<td>
 						

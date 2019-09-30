@@ -34,7 +34,7 @@
 					<td>{{$alumno->apellidos}}</td>
 					<td>{{$alumno->nombres}}</td>
 					<td>{{$alumno->carnet}}</td>
-					<td>{{$alumno->fechanacimiento}}</td>
+					<td>{{date('d/m/Y', strtotime($alumno->fechanacimiento))}}</td>
 					<td width=400>{{$alumno->grado->grado . " " . $alumno->grado->nombre }}</td>
 					<td>
 						@if(Auth::user()->admin() OR Auth::user()->secretaria())
@@ -45,9 +45,9 @@
 						<a href="{{route('admin.alumnos.destroy', $alumno->id)}}" onclick="return confirm ('Seguro que deseas elimnarlo?')" class="btn btn-danger btn-sm glyphicon glyphicon-remove" title="Eliminar"></a>
 						@endif
 						@if(Auth::user()->admin() OR Auth::user()->secretaria() OR Auth::user()->director() OR Auth::user()->contador())
+						<!--<a href="{{route('admin.boleta', $alumno->id)}}" class="btn btn-info btn-sm glyphicon glyphicon-user" title="Asignar Responsable"></a>-->
 						<a href="{{route('admin.boleta', $alumno->id)}}" class="btn btn-success btn-sm glyphicon glyphicon-education" title="Boleta de Calificaciones"></a>
-						<a href="{{route('admin.alumnos.compromiso', $alumno->id)}}" class="btn btn-warning btn-sm glyphicon glyphicon-file" title="Compromiso de Estudios" target="_blank"></a>
-						<a href="{{route('admin.alumnos.contrato', $alumno->id)}}" class="btn btn-default btn-sm glyphicon glyphicon-briefcase" title="Contrato de Adhesión" target="_blank"></a>
+						<a href="{{route('admin.alumnos.compromiso', $alumno->id)}}" class="btn btn-warning btn-sm glyphicon glyphicon-file" title="Faltas y Reportes" target="_blank"></a>
 						@endif
 					</td>
 				</tr>

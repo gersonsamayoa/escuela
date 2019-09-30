@@ -33,7 +33,7 @@ class TrasladosController extends Controller
       $grados=grado::select(DB::raw('concat (grado, " ", nombre) as fullgrado, id'))->where('ciclo_id', $cicloanterior->id)->orderBy('nombre','ASC')->orderBy('grado', 'ASC')->lists('fullgrado', 'id');
 
       /*Grados nuevo ciclo*/
-      $grados2=grado::select(DB::raw('concat (grado, " ", nombre, " Jornada ", jornada) as fullgrado, id'))->where('ciclo_id', $ciclos->id)->orderBy('nombre','ASC')->orderBy('grado', 'ASC')->lists('fullgrado', 'id');
+      $grados2=grado::select(DB::raw('concat (grado, " ", nombre) as fullgrado, id'))->where('ciclo_id', $ciclos->id)->orderBy('nombre','ASC')->orderBy('grado', 'ASC')->lists('fullgrado', 'id');
 
       /*Grado del ciclo anterior para busqueda por nombre o carnet*/
        $grados3=grado::where('ciclo_id', $cicloanterior->id)->select('id')->get();
@@ -99,10 +99,8 @@ class TrasladosController extends Controller
                 $alumno->fecha=$hoy;
                 $alumno->nombres=$alumnos->nombres;
                 $alumno->apellidos=$alumnos->apellidos;
-                $alumno->encargado=$alumnos->encargado;
-                $alumno->telefono=$alumnos->telefono;
                 $alumno->carnet=$alumnos->carnet;
-                $alumno->alumnonuevo="no";
+                $alumno->fechanacimiento=$alumnos->fechanacimiento;
                 $alumno->grado_id=$request->nuevogrado_id;
                 $alumno->correlativo=$ultimoAgregado->correlativo+1;
                 $alumno->save();

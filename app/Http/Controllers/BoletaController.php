@@ -118,7 +118,7 @@ class BoletaController extends Controller
         
         $alumnos2=alumno_curso::wherein('alumno_id',$alumnos3)->whereIn('curso_id', $cursos2)->orderby('alumno_id', 'ASC')->orderby('curso_id', 'ASC')->get();
 
-
+        
         return view('admin.calificaciones.boletaporgrado', compact('alumnos',
             'alumnos2', 'grados', 'totalpromedio', 'totalcursos', 'totalbim1','totalbim2','totalbim3','totalbim4'));
     }
@@ -142,7 +142,8 @@ class BoletaController extends Controller
 
         /*Cursos del nuevo grado*/
         $alumnos2=alumno_curso::wherein('alumno_id',$alumnos3)->whereIn('curso_id', $cursos2)->orderby('alumno_id', 'ASC')->orderby('curso_id', 'ASC')->get();
-
+        
+    
         $pdf=new PDF();
         if($grados->nivel_id==2 OR $grados->nivel_id==1){
         $pdf=PDF::loadview('admin.calificaciones.boletaporgradoprimpdf',compact('alumnos',

@@ -232,6 +232,13 @@ Route::group(['prefix'=>'admin','middleware' => 'auth'], function() {
 					'as'	=>	'admin.alumnos.contrato'
 					]);
 
+					/*Rutas para faltas*/
+					Route::resource('faltas', 'FaltasController');
+					Route::get('faltas/{id}/destroy', [
+						'uses'	=>'FaltasController@destroy',
+						'as' 	=>'admin.faltas.destroy'
+						]);
+
 
 
 });

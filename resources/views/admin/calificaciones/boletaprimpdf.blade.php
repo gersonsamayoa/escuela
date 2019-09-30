@@ -9,10 +9,10 @@
     <table width="100%">
       <tr>
         <td width="15%">
-        <img src="http://colegio.cts.edu.gt/img/ctsito.png" width="70px">
+        <img src="" width="70px">
         </td>
         <td width="85%" align="center">
-        <h1>Colegio Técnico de Computación CTS </h1>
+        <h1>Escuela Asentamiento 19 de Septiembre </h1>
         <p>Chiquimulilla, Santa Rosa 2,019</p>
         </td>
       </tr>
@@ -63,6 +63,6 @@
         <table width="100%">
           <tr>
             <td width="50%" align="center"><p>f._____________________________<br> <br> Maestra de Grado  </p> </td>
-            <td width="50%" align="center"><p>f._____________________________<br>Prof. Nery Solares<br> Director </p></td>
+            <td width="50%" align="center"><p>f._____________________________<br>Profa. Alma Lisseth Botello E.<br> Director </p></td>
           </tr>
         </table>

@@ -18,7 +18,7 @@ class Alumnos extends Migration
             $table->string('nombres');
             $table->string('apellidos');
             $table->date('fechanacimiento');
-            $table->string('carnet')->unique();
+            $table->string('carnet');
             $table->integer('correlativo');
             $table->integer('grado_id')->unsigned();
             $table->foreign('grado_id')->references('id')->on('grados')->onDelete('cascade');

@@ -74,9 +74,9 @@ class CalificacionesController extends Controller
 
         /*Calculo del Promedio con base a cantidad de bimestres del grado*/
         if($cantidadbimestres==4){
-                            
-                $promedio=($request->bim1[$i]+$request->bim2[$i]+$request->bim3[$i]+$request->bim4[$i])/$cantidadbimestres;
-
+        
+                $promedio=((int)$request->bim1[$i]+(int)$request->bim2[$i]+(int)$request->bim3[$i]+(int)$request->bim4[$i])/$cantidadbimestres;
+                
 
                 $alumnos->cursos()->attach($request->curso_id[$i], ['bim1' => round($request->bim1[$i],0), 'bim2' => round($request->bim2[$i],0), 'bim3' => round($request->bim3[$i],0), 'bim4' => round($request->bim4[$i],0), 'cantidad_bimestres'=>$cantidadbimestres, 'promedio' => round($promedio,2)]);
 

@@ -14,12 +14,12 @@ class AlumnoCurso extends Migration
     {
       Schema::create('alumno_curso', function (Blueprint $table){
         $table->increments('id');
-        $table->decimal('bim1', 8, 0)->nullable();
-        $table->decimal('bim2', 8, 0)->nullable();
-        $table->decimal('bim3', 8, 0)->nullable();
-        $table->decimal('bim4', 8, 0)->nullable();
+        $table->integer('bim1')->nullable();
+        $table->integer('bim2')->nullable();
+        $table->integer('bim3')->nullable();
+        $table->integer('bim4')->nullable();
         $table->integer('cantidad_bimestres')->nullable();
-        $table->decimal('promedio', 8, 0)->nullable();
+        $table->decimal('promedio', 8, 2)->nullable();
         $table->integer('alumno_id')->unsigned();
         $table->foreign('alumno_id')->references('id')->on('alumnos')->onDelete('cascade');
         $table->integer('curso_id')->unsigned();
