@@ -23,8 +23,8 @@
             @endif
             
             @if(Auth::user()->admin() OR Auth::user()->director())
-            <li><a href="{{route('admin.colegiaturas.consultagrado')}}">Faltas por Alumno</a></li>
-            <li><a href="{{route('admin.faltas.index')}}">Faltas</a></li>
+             <!--<li><a href="{{route('admin.colegiaturas.consultagrado')}}">Faltas por Alumno</a></li>-->
+            <li><a href="{{route('admin.faltas.index')}}">Tipos de Faltas</a></li>
             @endif
 
              @if(Auth::user()->secretaria())

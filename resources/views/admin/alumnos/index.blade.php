@@ -47,7 +47,7 @@
 						@if(Auth::user()->admin() OR Auth::user()->secretaria() OR Auth::user()->director() OR Auth::user()->contador())
 						<!--<a href="{{route('admin.boleta', $alumno->id)}}" class="btn btn-info btn-sm glyphicon glyphicon-user" title="Asignar Responsable"></a>-->
 						<a href="{{route('admin.boleta', $alumno->id)}}" class="btn btn-success btn-sm glyphicon glyphicon-education" title="Boleta de Calificaciones"></a>
-						<a href="{{route('admin.alumnos.compromiso', $alumno->id)}}" class="btn btn-warning btn-sm glyphicon glyphicon-file" title="Faltas y Reportes" target="_blank"></a>
+						<a href="{{route('admin.faltasalumno.detalles', $alumno->id)}}" class="btn btn-warning btn-sm glyphicon glyphicon-file" title="Faltas y Reportes" target="_blank"></a>
 						@endif
 					</td>
 				</tr>

@@ -238,9 +238,30 @@ Route::group(['prefix'=>'admin','middleware' => 'auth'], function() {
 						'uses'	=>'FaltasController@destroy',
 						'as' 	=>'admin.faltas.destroy'
 						]);
+					
+					/*Rutas asignación falta alumno */
+					Route::resource('faltasalumno', 'FaltasAlumnoController');
+
+					Route::get('faltasalumno/{id}/details', [
+					'uses' => 'FaltasAlumnoController@detalles',
+					'as' => 'admin.faltasalumno.detalles'
+					]);
 
 
+					Route::get('faltasalumno/{id}/create', [
+					'uses' => 'FaltasAlumnoController@create',
+					'as' => 'admin.faltasalumno.create'
+					]);
 
+					Route::get('faltasalumno/{id}/destroy', [
+						'uses'	=>'FaltasAlumnoController@destroy',
+						'as'	=>'admin.faltasalumno.destroy'
+						]);
+
+					Route::get('faltasalumno/{id}/eliminar', [
+						'uses'	=>'FaltasAlumnoController@eliminar',
+						'as'	=>'admin.faltasalumno.eliminar'
+						]);
 });
 
 		Route::get('admin/auth/login',[

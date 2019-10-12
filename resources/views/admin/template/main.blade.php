@@ -30,6 +30,6 @@
 </body>
 
 <footer>
-<p class="text-center">&copy; 2019 Sistema Realizado por <a href="#">Tech-Tools </a>.<br>gersonsamayoa@gmail.com</p>
+<p class="text-center">&copy; 2019 Sistema Realizado por <a href="#"> </a><br>gersonsamayoa@gmail.com</p>
 </footer>
 </html>

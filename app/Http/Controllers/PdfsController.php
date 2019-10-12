@@ -10,6 +10,7 @@ use App\alumno;
 use App\colegiatura;
 use App\mes;
 use App\grado;
+use App\alumno_falta;
 use Barryvdh\DomPDF\Facade as PDF;
 
 class PdfsController extends Controller
@@ -22,8 +23,8 @@ class PdfsController extends Controller
     public function index($id)
     {
 
-      $colegiaturas=Colegiatura::find($id);
-      $pdf	= PDF::loadview('admin.alumnos.factura', ['colegiaturas' => $colegiaturas]);
+      $faltas=alumno_falta::find($id);
+      $pdf	= PDF::loadview('admin.alumnos.reporte', ['faltas' => $faltas]);
       return $pdf->stream('archivo.pdf');
     }
 
