@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class alumno extends Model
+class alumno extends Model // Campos Accesibles de la tabla
 {
     protected $table ="alumnos";
 

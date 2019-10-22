@@ -7,7 +7,7 @@ class Alumnos extends Migration
 {
     /**
      * Run the migrations.
-     *
+     * Migración tabla alumnos
      * @return void
      */
     public function up()
@@ -22,14 +22,13 @@ class Alumnos extends Migration
             $table->integer('correlativo');
             $table->integer('grado_id')->unsigned();
             $table->foreign('grado_id')->references('id')->on('grados')->onDelete('cascade');
-
             $table->timestamps();
              });
     }
 
     /**
      * Reverse the migrations.
-     *
+     * Migración tabla alumnos
      * @return void
      */
     public function down()
